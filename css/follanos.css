@@ -1,0 +1,30 @@
+BODY
+{
+	background: url('../assets/img/background.jpg') repeat;
+	color: #FFF;
+}
+#outer-body-wrap
+{
+	background: url('../assets/img/tyresbg.png') no-repeat center top / 100%;
+}
+H2
+{
+	color: #FFF;
+	font-size: 19.7pt;
+}
+.logo H2
+{
+	margin-top: 16px;
+}
+#inner-body-wrap
+{
+	background: url('../assets/img/BG_Glow.png') no-repeat center 100px / 50%;
+}
+.HeaderRightmj P
+{
+	text-align: right;
+}
+DIV.logo
+{
+	text-align: center;
+}

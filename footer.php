@@ -11,5 +11,8 @@
 </div>
 <?php wp_footer(); ?>
 <?php do_action('foundationPress_before_closing_body'); ?>
+  </div><!-- Inner-body Wrap-->
+  </div><!-- Outer-body-Wrap-->
+  
 </body>
 </html>

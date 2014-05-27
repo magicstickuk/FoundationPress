@@ -22,6 +22,7 @@
     } ?></title>
     
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css" />
+     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/follanos.css" />
     
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
@@ -33,7 +34,11 @@
   </head>
   <body <?php body_class(); ?>>
   <?php do_action('foundationPress_after_body'); ?>
-  
+
+  <div id="outer-body-wrap">
+  <div id="inner-body-wrap">
+  	
+
   <div class="off-canvas-wrap">
   <div class="inner-wrap">
   
@@ -67,6 +72,30 @@
                 </section>
             </nav>
         </div>
+        
+       <div class="row">
+       		
+       		<div class="medium-3 large-3 columns hide-for-small-only">
+       			<p>29 Flowerhill Street<br/>
+	   			ML6 6AP<br/>
+	   			Airdrie, United Kingdom<br/>
+	   			MAP</p>
+       		</div>
+       		
+       		<div class="small-12 medium-6 large-6 columns logo">
+       			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png"/></a>
+       			
+       			<h2>01236 761288 • 07852262729</h2>
+       		</div>
+       		
+       		<div class="medium-3 large-3 columns HeaderRightmj hide-for-small-only">
+       			<p>Mon - Fri 8.30am til LATE<br/>
+	   			Sat - 8.30am til 3pm<br/>
+	   			Sun - appointment only</br/>
+       		</div>
+       		
+
+       </div>
 
 
 
