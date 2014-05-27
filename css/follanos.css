@@ -7,6 +7,24 @@ BODY
 {
 	background: url('../assets/img/tyresbg.png') no-repeat center top / 100%;
 }
+.top-bar LI.divider
+{
+	border-left: 1px dotted #282828;
+	border-right: 0;
+}
+.top-bar LI A
+{
+	height: 51px;
+	line-height: 51px !important;
+}
+.top-bar-section UL
+{
+}
+NAV.top-bar
+{
+	background: none;
+	height: 51px;
+}
 H2
 {
 	color: #FFF;
@@ -19,6 +37,19 @@ H2
 #inner-body-wrap
 {
 	background: url('../assets/img/BG_Glow.png') no-repeat center 100px / 50%;
+}
+.top-bar-section UL
+{
+	background-color: transparent;
+}
+.top-bar-section LI:not(.has-form) A:not(.button)
+{
+	background-color: transparent;
+}
+.top-bar-container
+{
+	background: url('../assets/img/topbar_bg.jpg');
+	height: 51px;
 }
 .HeaderRightmj P
 {
