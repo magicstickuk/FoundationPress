@@ -23,6 +23,7 @@
     
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css" />
      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/follanos.css" />
+     <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
     
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
@@ -31,6 +32,23 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
     
     <?php wp_head(); ?>
+    
+    <script src="<?php bloginfo('template_url')?>/js/bjqs-1.3.min.js"></script>
+	<link type="text/css" rel="Stylesheet" href="<?php bloginfo('template_url')?>/css/bjqs.css" />
+	
+	<script type="text/javascript">
+	$(document).ready(function($) {
+	    $('#my-slideshow').bjqs({
+	        'height' : 300,
+	        'width' : $(window).width(),
+			'animtype' : 'fade',
+	        'responsive' : true,
+			'showmarkers' : false,
+			'showcontrols' : false,
+	    });
+	});
+	</script>
+
   </head>
   <body <?php body_class(); ?>>
   <?php do_action('foundationPress_after_body'); ?>
@@ -61,11 +79,7 @@
   
         <div class="top-bar-container contain-to-grid show-for-medium-up">
             <nav class="top-bar" data-topbar="">
-                <ul class="title-area">
-                    <li class="name">
-                        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-                    </li>          
-                </ul>
+                
                 <section class="top-bar-section">
                     <?php foundationPress_top_bar_l(); ?>
                     <?php foundationPress_top_bar_r(); ?>

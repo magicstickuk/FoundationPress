@@ -2,6 +2,7 @@ BODY
 {
 	background: url('../assets/img/background.jpg') repeat;
 	color: #FFF;
+	font-family: Muli, sans-serif;
 }
 #outer-body-wrap
 {
@@ -38,6 +39,15 @@ H2
 {
 	background: url('../assets/img/BG_Glow.png') no-repeat center 100px / 50%;
 }
+P.feat-content
+{
+	text-align: center;
+}
+P.featimage
+{
+	text-align: center;
+	min-height: 143px;
+}
 .top-bar-section UL
 {
 	background-color: transparent;
@@ -58,4 +68,54 @@ H2
 DIV.logo
 {
 	text-align: center;
+}
+#slider
+{
+	margin-top: 20px;
+}
+.button-large A, .button-small A
+{
+	text-align: center;
+	color: #FFF;
+	/*+text-shadow:1px 1px 1px #000;*/
+	-moz-text-shadow: 1px 1px 1px #000;
+	-webkit-text-shadow: 1px 1px 1px #000;
+	-o-text-shadow: 1px 1px 1px #000;
+	text-shadow: 1px 1px 1px #000;
+	text-transform: uppercase;
+	width: 219px;
+	display: inline-block;
+	font-size: 15px;
+	line-height: 51px;
+	background: url('../assets/img/button_large.png') 0% / contain;
+}
+.button-large, .button-small
+{
+	text-align: center;
+}
+.button-small A
+{
+	width: 158px;
+	height: 37px;
+	line-height: 38px;
+	font-size: 14px;
+}
+#my-slideshow H2
+{
+	text-align: center;
+	/*+text-shadow:1px 1px 1px #000;*/
+	-moz-text-shadow: 1px 1px 1px #000;
+	-webkit-text-shadow: 1px 1px 1px #000;
+	-o-text-shadow: 1px 1px 1px #000;
+	text-shadow: 1px 1px 1px #000;
+}
+H1, H2, H3, H4, H5, H6
+{
+	font-family: Muli, sans-serif !important;
+}
+.feature-boxes H2
+{
+	text-align: center;
+	font-size: 31.4pt;
+	margin: 27px 0;
 }

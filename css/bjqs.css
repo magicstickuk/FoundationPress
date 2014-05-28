@@ -1,0 +1,66 @@
+/*Basic jQuery Slider essential styles*/
+UL.bjqs
+{
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	display: none;
+}
+LI.bjqs-slide
+{
+	position: absolute;
+	display: none;
+}
+#my-slideshow LI
+{
+	background-position: center center;
+}
+UL.bjqs-controls
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 9999;
+}
+UL.bjqs-controls.v-centered LI A
+{
+	position: absolute;
+}
+UL.bjqs-controls.v-centered LI.bjqs-next A
+{
+	right: 0;
+}
+UL.bjqs-controls.v-centered LI.bjqs-prev A
+{
+	left: 0;
+}
+OL.bjqs-markers
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+OL.bjqs-markers.h-centered
+{
+	text-align: center;
+}
+OL.bjqs-markers LI
+{
+	display: inline;
+}
+OL.bjqs-markers LI A
+{
+	display: inline-block;
+}
+P.bjqs-caption
+{
+	display: block;
+	width: 96%;
+	margin: 0;
+	padding: 2%;
+	position: absolute;
+	bottom: 0;
+}
