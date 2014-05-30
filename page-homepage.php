@@ -50,7 +50,7 @@ get_header(); ?>
 </div>
 
 <div class="row feature-boxes">
-	<div class="small-12 medium-6 large-3 columns">
+	<div class="medium-6 large-3 columns">
 		<h2>MOT</h2>
 		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_car.png"></p>
 		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
@@ -58,7 +58,7 @@ get_header(); ?>
 			<a href="#">Read More</a>
 		</div>
 	</div>
-	<div class="small-12 medium-6 large-3 columns">
+	<div class="medium-6 large-3 columns">
 		<h2>SERVICING</h2>
 		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_speedometer.png"></p>
 		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
@@ -66,7 +66,7 @@ get_header(); ?>
 			<a href="#">Read More</a>
 		</div>
 	</div>
-	<div class="small-12 medium-6 large-3 columns">
+	<div class="medium-6 large-3 columns">
 		<h2>TYRES</h2>
 		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_tyre.png"></p>
 		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
@@ -74,7 +74,7 @@ get_header(); ?>
 			<a href="#">Read More</a>
 		</div>
 	</div>
-	<div class="small-12 medium-6 large-3 columns">
+	<div class="medium-6 large-3 columns end">
 		<h2>ABOUT</h2>
 		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_garage.png"></p>
 		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
@@ -82,6 +82,44 @@ get_header(); ?>
 			<a href="#">Read More</a>
 		</div>
 	</div>
+</div>
+
+
+<div class="map">
+	
+	<?php echo do_shortcode('
+						[google-map-v3 
+										
+										width=			"100%"
+										height=			"350"
+										zoom=			"14"
+										maptype=		"roadmap"
+										mapalign=		"center"
+										directionhint=	"false"
+										language=		"default"
+										poweredby=		"false"
+										maptypecontrol=	"true"
+										pancontrol=		"true"
+										zoomcontrol=	"true"
+										scalecontrol=	"true"
+										streetviewcontrol="true"
+										scrollwheelcontrol="false"
+										draggable=		"true"
+										tiltfourtyfive=	"false"
+										enablegeolocationmarker="false"
+										enablemarkerclustering="false"
+										addmarkermashup="false"
+										addmarkermashupbubble="false" 
+										addmarkerlist=	"55.8680374,-3.9730085{}mappin.png{}Follanos Garage"
+										bubbleautopan=	"true" 
+										distanceunits=	"miles"
+										showbike=		"false"
+										showtraffic=	"false"
+										showpanoramio=	"false"
+						]')
+		?>
+	
+	
 </div>
 
 <div class="row">

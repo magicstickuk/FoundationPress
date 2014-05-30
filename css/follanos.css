@@ -43,6 +43,13 @@ P.feat-content
 {
 	text-align: center;
 }
+@media only screen and (max-width: 40em)
+{
+	P.feat-content
+	{
+		padding: 0 30px;
+	}
+}
 P.featimage
 {
 	text-align: center;
@@ -119,3 +126,8 @@ H1, H2, H3, H4, H5, H6
 	font-size: 31.4pt;
 	margin: 27px 0;
 }
+.map
+{
+	margin-top: 44px;
+}
+
