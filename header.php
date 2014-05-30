@@ -68,7 +68,10 @@
     </section>
     <section class="middle tab-bar-section">
       
-      <h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+      <div id="mobileNav">
+      		<a href="tel:01236761288">Call Now</a>
+      		<a href="https://maps.google.com?saddr=Current+Location&daddr=55.8680374,-3.9730085">Get Directions</a>
+      </div>
 
     </section>
   </nav>

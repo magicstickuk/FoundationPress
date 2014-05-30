@@ -16,6 +16,7 @@ LI.bjqs-slide
 #my-slideshow LI
 {
 	background-position: center center;
+	background-size: cover;
 }
 UL.bjqs-controls
 {

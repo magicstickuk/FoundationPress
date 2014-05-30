@@ -35,9 +35,36 @@ H2
 {
 	margin-top: 16px;
 }
+@media only screen and (max-width: 40em)
+{
+	.logo H2
+	{
+		font-size: 15px;
+	}
+}
 #inner-body-wrap
 {
 	background: url('../assets/img/BG_Glow.png') no-repeat center 100px / 50%;
+}
+NAV.tab-bar SECTION.tab-bar-section
+{
+	right: 0;
+}
+#mobileNav A
+{
+	color: #FFF;
+	font-size: 11px;
+	background: #3D3D3D;
+	padding: 6px;
+	/*+border-radius:29px;*/
+	-moz-border-radius: 29px;
+	-webkit-border-radius: 29px;
+	-khtml-border-radius: 29px;
+	border-radius: 29px;
+}
+#mobileNav
+{
+	float: right;
 }
 P.feat-content
 {
@@ -130,4 +157,3 @@ H1, H2, H3, H4, H5, H6
 {
 	margin-top: 44px;
 }
-
