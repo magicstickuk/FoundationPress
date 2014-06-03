@@ -8,6 +8,17 @@ BODY
 {
 	background: url('../assets/img/tyresbg.png') no-repeat center top / 100%;
 }
+TIME
+{
+	font-size: 14px;
+	color: #808080;
+	font-style: italic;
+	padding-bottom: 49px;
+}
+HEADER
+{
+	margin-bottom: 24px;
+}
 .top-bar LI.divider
 {
 	border-left: 1px dotted #282828;
@@ -31,6 +42,11 @@ H2
 	color: #FFF;
 	font-size: 19.7pt;
 }
+.hentry H2 A
+{
+	font-size: 29.7pt;
+	color: #FFFFFF;
+}
 .logo H2
 {
 	margin-top: 16px;
@@ -45,6 +61,37 @@ H2
 #inner-body-wrap
 {
 	background: url('../assets/img/BG_Glow.png') no-repeat center 100px / 50%;
+}
+.blog .container, .single .container
+{
+	margin-top: 48px;
+}
+.entry-content .alignright
+{
+	float: right;
+	margin: 0 0 15px 15px;
+}
+@media only screen and (max-width: 40em)
+{
+	.entry-content IMG
+	{
+		width: 100%;
+	}
+}
+.entry-content .alignnone
+{
+	margin: 15px;
+}
+.entry-content .alignleft
+{
+	float: left;
+	margin: 0 15px 15px 0;
+}
+.entry-content IMG
+{
+	padding: 10px;
+	background-color: #FFF;
+	border: 1px solid;
 }
 NAV.tab-bar SECTION.tab-bar-section
 {
@@ -146,6 +193,22 @@ DIV.logo
 H1, H2, H3, H4, H5, H6
 {
 	font-family: Muli, sans-serif !important;
+}
+H1.entry-title
+{
+	color: #FFF;
+}
+ARTICLE.widget H6
+{
+	color: #FFF;
+	font-size: 15pt;
+	background-color: #9B9C9B;
+	padding: 5px;
+	text-transform: uppercase;
+}
+HEADER H2
+{
+	line-height: 1em;
 }
 .feature-boxes H2
 {
