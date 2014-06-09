@@ -46,7 +46,34 @@
 			'showmarkers' : false,
 			'showcontrols' : false,
 	    });
+	    
+	    $('#testimonials').bjqs({
+	        'height' : 300,
+	        'width' : $('#testimonials').width(),
+			'animtype' : 'slide',
+	        'responsive' : true,
+			'showmarkers' : false,
+			'showcontrols' : true,
+			'nexttext' : '<img src="<?php bloginfo('template_url')?>/assets/img/arrowright.png"/>', // Text for 'next' button (can use HTML)
+			'prevtext' : '<img src="<?php bloginfo('template_url')?>/assets/img/arrowleft.png"/>', // Text for 'previous' button (can use HTML)
+	    });
+	    
+	    var centerSlide = $('#my-slideshow').height() - $('.slideContentContainer').height();
+	    var DirectionHeight = ($('#testimonials LI DIV DIV').height() / 2) + 23;
+	    $('#my-slideshow li').css('padding-top',centerSlide / 2 + 'px');
+	    $('#testimonials .bjqs-prev A').css('top',DirectionHeight + 'px');
+	    $('#testimonials .bjqs-next A').css('top',DirectionHeight + 'px');
+	   
+	    
 	});
+	
+	$( window ).resize(function() {
+		var centerSlide = $('#my-slideshow').height() - $('.slideContentContainer').height(); 
+		var DirectionHeight = ($('#testimonials LI DIV DIV').height() / 2) + 23;   
+		$('#my-slideshow li').css('padding-top',centerSlide / 2 + 'px');
+		$('#testimonials .bjqs-prev A').css('top',DirectionHeight + 'px');
+	    $('#testimonials .bjqs-next A').css('top',DirectionHeight + 'px');
+  	});
 	</script>
 
   </head>

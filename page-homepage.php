@@ -122,6 +122,40 @@ get_header(); ?>
 	
 </div>
 
+<div class="row testimonials">
+	<div class="small-12 large-12 columns">
+	
+		<div id="testimonials">
+	    <ul class="bjqs">
+	        <li>
+		       
+		       <div class="row">
+		       			<div class="small-10 small-centered large-centered large-10 columns">
+		       				<p class="quote">I was driving a death trap for 5 months and i didn't know, Follano's fixed everything and I feel like I'm driving a new car.  I highly recommend these guys</p>
+		       				
+		       				<p class="bywhom">Arlene Fraser</p>
+		       			</div>
+		       </div>
+		        
+	        </li>
+	        <li>
+		       
+		       <div class="row">
+		       			<div class="small-8 small-centered large-centered large-8 columns">
+		       				Sofia
+		       			</div>
+		       </div>
+		        
+	        </li>
+	       
+	        
+	    </ul>
+	</div>
+	
+	</div>
+
+</div>
+
 <div class="row">
 	<div class="small-12 large-12 columns" role="main">
 	

@@ -8,6 +8,13 @@ BODY
 {
 	background: url('../assets/img/tyresbg.png') no-repeat center top / 100%;
 }
+@media only screen and (max-width: 40em)
+{
+	#testimonials .bjqs-controls A IMG
+	{
+		width: 50%;
+	}
+}
 TIME
 {
 	font-size: 14px;
@@ -219,4 +226,51 @@ HEADER H2
 .map
 {
 	margin-top: 44px;
+}
+.testimonials
+{
+	margin-top: 41px;
+}
+.bywhom
+{
+	text-align: center;
+	font-size: 1.6em;
+	color: #A4A4A4;
+	font-style: italic;
+}
+.quote
+{
+	font-size: 1.8em;
+	line-height: 1.2em;
+	text-align: center;
+}
+@media only screen and (max-width: 40em)
+{
+	.quote
+	{
+		font-size: 18px;
+	}
+}
+.quote:before
+{
+	content: open-quote;
+}
+.quote:after
+{
+	content: close-quote;
+}
+#testimonials LI DIV DIV
+{
+	padding: 0 60px;
+}
+@media only screen and (max-width: 40em)
+{
+	#testimonials LI DIV DIV
+	{
+		padding: 0 20px;
+	}
+}
+#testimonials LI DIV DIV
+{
+	font-style: italic;
 }
