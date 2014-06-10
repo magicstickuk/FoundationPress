@@ -33,6 +33,10 @@
     
     <?php wp_head(); ?>
     
+    <?php
+    	$delay = get_field('slider_delay','options')*1000;   	
+    ?>
+    
     <script src="<?php bloginfo('template_url')?>/js/bjqs-1.3.min.js"></script>
 	<link type="text/css" rel="Stylesheet" href="<?php bloginfo('template_url')?>/css/bjqs.css" />
 	
@@ -45,6 +49,7 @@
 	        'responsive' : true,
 			'showmarkers' : false,
 			'showcontrols' : false,
+			'animspeed' : <?php echo $delay; ?>, // the delay between each slide
 	    });
 	    
 	    $('#testimonials').bjqs({
@@ -59,7 +64,7 @@
 	    });
 	    
 	    var centerSlide = $('#my-slideshow').height() - $('.slideContentContainer').height();
-	    var DirectionHeight = ($('#testimonials LI DIV DIV').height() / 2) + 23;
+	    var DirectionHeight = 20;
 	    $('#my-slideshow li').css('padding-top',centerSlide / 2 + 'px');
 	    $('#testimonials .bjqs-prev A').css('top',DirectionHeight + 'px');
 	    $('#testimonials .bjqs-next A').css('top',DirectionHeight + 'px');
@@ -75,6 +80,12 @@
 	    $('#testimonials .bjqs-next A').css('top',DirectionHeight + 'px');
   	});
 	</script>
+	
+	<?php
+	 
+	 $location = get_field('location_of_follanos','options');
+	
+	?>
 
   </head>
   <body <?php body_class(); ?>>
@@ -96,8 +107,18 @@
     <section class="middle tab-bar-section">
       
       <div id="mobileNav">
-      		<a href="tel:01236761288">Call Now</a>
-      		<a href="https://maps.google.com?saddr=Current+Location&daddr=55.8680374,-3.9730085">Get Directions</a>
+      		
+      		<div id="socialTopBar">
+                    	<?php if(get_field('twitter_link','options')):?>
+                    		<a href="<?php the_field('twitter_link','options')?>" target="_blank"><img class="socialicons" src="<?php bloginfo('template_url')?>/assets/img/twitter.png"/></a>
+                    	<?php endif;?>
+                    	<?php if(get_field('facebook_link','options')):?>
+                    		<a href="<?php the_field('facebook_link','options')?>" target="_blank"><img class="socialicons" src="<?php bloginfo('template_url')?>/assets/img/facebook.png"/></a>
+                    	<?php endif;?>
+                    </div>
+      		
+      		<a href="tel:<?php the_field('telephone_number', 'options');?>">Call Now</a>
+      		<a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>">Get Directions</a>
       </div>
 
     </section>
@@ -112,30 +133,33 @@
                 
                 <section class="top-bar-section">
                     <?php foundationPress_top_bar_l(); ?>
-                    <?php foundationPress_top_bar_r(); ?>
+                    <div id="socialTopBar">
+                    	<?php if(get_field('twitter_link','options')):?>
+                    		<a href="<?php the_field('twitter_link','options')?>" target="_blank"><img class="socialicons" src="<?php bloginfo('template_url')?>/assets/img/twitter.png"/></a>
+                    	<?php endif;?>
+                    	<?php if(get_field('facebook_link','options')):?>
+                    		<a href="<?php the_field('facebook_link','options')?>" target="_blank"><img class="socialicons" src="<?php bloginfo('template_url')?>/assets/img/facebook.png"/></a>
+                    	<?php endif;?>
+                    </div>
                 </section>
             </nav>
         </div>
         
        <div class="row">
        		
-       		<div class="medium-3 large-3 columns hide-for-small-only">
-       			<p>29 Flowerhill Street<br/>
-	   			ML6 6AP<br/>
-	   			Airdrie, United Kingdom<br/>
-	   			MAP</p>
+       		<div class="medium-3 large-3 columns show-for-large-up">
+       			<p><?php the_field('address', 'options');?></p>
        		</div>
        		
-       		<div class="small-12 medium-6 large-6 columns logo">
+       		<div class="small-12 medium-12 large-6 columns logo">
        			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png"/></a>
        			
-       			<h2>01236 761288 • 07852262729</h2>
+       			<h2><?php the_field('telephone_number', 'options');?> • 07852262729</h2>
+       			<p class="home_email"><a href="<?php the_field('email_address', 'options');?>"><?php the_field('email_address', 'options');?></a></p>
        		</div>
        		
-       		<div class="medium-3 large-3 columns HeaderRightmj hide-for-small-only">
-       			<p>Mon - Fri 8.30am til LATE<br/>
-	   			Sat - 8.30am til 3pm<br/>
-	   			Sun - appointment only</br/>
+       		<div class="medium-3 large-3 columns HeaderRightmj show-for-large-up">
+       			<p><?php the_field('opening_hours', 'options');?></p>
        		</div>
        		
 

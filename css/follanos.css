@@ -8,8 +8,62 @@ BODY
 {
 	background: url('../assets/img/tyresbg.png') no-repeat center top / 100%;
 }
+.page-id-56 ARTICLE BUTTON.large
+{
+	text-align: center;
+	margin-top: 35px;
+}
+.wpcf7-form P
+{
+	text-align: center;
+	font-size: 17.9pt;
+}
+.wpcf7-form INPUT
+{
+	/*+border-radius:10px;*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+	padding: 23px;
+}
+INPUT.wpcf7-submit
+{
+	padding: 14px 13px 13px;
+	width: 113px;
+	background: #35B4DA;
+	border: none;
+	color: #FFF;
+	font-size: 14.7pt;
+}
+BUTTON.follanosButton
+{
+	margin-top: 30px;
+}
+.seviceplans
+{
+	text-align: center;
+	line-height: 1.5em;
+}
+#socialTopBar
+{
+	float: right;
+	margin-right: 13px;
+}
+P.home_email
+{
+	margin-bottom: 0;
+}
+P.home_email A
+{
+	color: #FFF;
+}
 @media only screen and (max-width: 40em)
 {
+	P.home_email A
+	{
+		font-size: 9.5pt;
+	}
 	#testimonials .bjqs-controls A IMG
 	{
 		width: 50%;
@@ -69,6 +123,12 @@ H2
 {
 	background: url('../assets/img/BG_Glow.png') no-repeat center 100px / 50%;
 }
+.page-template-page-full-php SECTION.container
+{
+	margin-top: 37px;
+	padding-top: 21px;
+	border-top: 1px dotted #FFFFFF;
+}
 .blog .container, .single .container
 {
 	margin-top: 48px;
@@ -77,6 +137,15 @@ H2
 {
 	float: right;
 	margin: 0 0 15px 15px;
+}
+.address
+{
+	margin-top: 30px;
+	border-bottom: 1px solid #FFF;
+}
+.openinghours P, .address P, .openinghours H2, .address H2
+{
+	text-align: center;
 }
 @media only screen and (max-width: 40em)
 {
@@ -201,9 +270,38 @@ H1, H2, H3, H4, H5, H6
 {
 	font-family: Muli, sans-serif !important;
 }
+H1.follanosServices
+{
+	color: #FFF;
+	font-size: 20.8pt;
+	background-color: #007395;
+	padding: 12px;
+	/*+border-radius:10px;*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+.gold
+{
+	color: #F5E43F;
+}
+.silver
+{
+	color: #959594;
+}
+.bronze
+{
+	color: #D3A91C;
+}
 H1.entry-title
 {
 	color: #FFF;
+}
+.centerme
+{
+	text-align: center;
 }
 ARTICLE.widget H6
 {
@@ -273,4 +371,18 @@ HEADER H2
 #testimonials LI DIV DIV
 {
 	font-style: italic;
+}
+#mobileNav #socialTopBar A
+{
+	background: none !important;
+}
+#mobileNav #socialTopBar IMG
+{
+	height: 22px;
+}
+.modal .title
+{
+	text-align: center !important;
+	margin-bottom: 10px !important;
+	font-size: 30px !important;
 }

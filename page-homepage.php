@@ -4,84 +4,107 @@ Template Name: Home Page Template
 */
 get_header(); ?>
 
+<?php
+	 
+	 $location = get_field('location_of_follanos','options');
+	
+?>
 
 <div id="slider">
 	<div id="my-slideshow">
 	    <ul class="bjqs">
-	        <li style="background-image:url('<?php bloginfo(template_url);?>/assets/img/slidebg.jpg')">
+	    
+	    	<?php if(get_field('slideshow','options')): ?>
+ 
+
+ 
+				<?php while(has_sub_field('slideshow','options')): ?>
+ 
+					 <li style="background-image:url('<?php the_sub_field('image'); ?>')">
 		       
-		       <div class="slideContentContainer">
-			       <div class="row">
-			       		<div class="small-12 large-12 columns">
-			       			<h2>MOT / SERVICING / REPAIR / DIAGNOSTICS / TYRES / BATTERIES</h2>
-			       		</div>
-			       </div>
-			       <div class="row">
-			       		<div class="small-12 large-12 columns">
-			       			<div class="button-large">
-			       				<a href="#">Contact Us</a>
-			       			</div>
-			       		</div>
-			       </div>
-		       </div>
+					       <div class="slideContentContainer">
+						       <div class="row">
+						       		<div class="small-12 large-12 columns">
+						       			<h2><?php the_sub_field('slide_content'); ?></h2>
+						       		</div>
+						       </div>
+						       <div class="row">
+						       		<div class="small-12 large-12 columns">
+						       			<div class="button-large">
+						       				<a href="<?php the_sub_field('button_link'); ?>"><?php the_sub_field('button_text'); ?></a>
+						       			</div>
+						       		</div>
+						       </div>
+					       </div>
 		        
-	        </li>
-	        <li style="background-image:url('<?php bloginfo(template_url);?>/assets/img/slidebg.jpg')">
-		       
-		       <div class="slideContentContainer">
-			       <div class="row">
-			       		<div class="small-12 large-12 columns">
-			       			<h2>MOT / SERVICING / REPAIR / DIAGNOSTICS / TYRES / BATTERIES</h2>
-			       		</div>
-			       </div>
-			       <div class="row">
-			       		<div class="small-12 large-12 columns">
-			       			<div class="button-large">
-			       				<a href="#">Contact Us</a>
-			       			</div>
-			       		</div>
-			       </div>
-		       </div>
-		        
-	        </li>
+					</li>
+ 
+				<?php endwhile; ?>
+ 
+
+ 
+			<?php endif; ?>
+	        
 	        
 	    </ul>
 	</div>
 </div>
 
+
+<div class="row address hide-for-large-up">
+	
+	<div class="small-10 medium-6 columns show-for-medium-only">
+	
+			<h2>Address</h2>
+			
+			<p><?php the_field('address', 'options');?></p>
+	
+	</div>
+	
+	<div class="small-12 medium-6 columns">
+	
+			<h2>Opening Hours</h2>
+			
+			<p><?php the_field('opening_hours', 'options');?></p>
+			
+			
+	
+	</div>
+	
+	
+	
+</div>
+
+<div class="row openinghours hide-for-large-up">
+	
+	
+	
+</div>
+
 <div class="row feature-boxes">
-	<div class="medium-6 large-3 columns">
-		<h2>MOT</h2>
-		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_car.png"></p>
-		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
-		<div class="button-small">
-			<a href="#">Read More</a>
-		</div>
-	</div>
-	<div class="medium-6 large-3 columns">
-		<h2>SERVICING</h2>
-		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_speedometer.png"></p>
-		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
-		<div class="button-small">
-			<a href="#">Read More</a>
-		</div>
-	</div>
-	<div class="medium-6 large-3 columns">
-		<h2>TYRES</h2>
-		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_tyre.png"></p>
-		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
-		<div class="button-small">
-			<a href="#">Read More</a>
-		</div>
-	</div>
-	<div class="medium-6 large-3 columns end">
-		<h2>ABOUT</h2>
-		<p class="featimage"><img src="<?php bloginfo(template_url);?>/assets/img/icon_garage.png"></p>
-		<p class="feat-content">£29.99 for full MOT Test and free retest if required. It is mandatory for every vehicle over 3 years old to have a MOT Certificate</p>
-		<div class="button-small">
-			<a href="#">Read More</a>
-		</div>
-	</div>
+
+<?php if(get_field('feature_box')): ?>
+ 
+
+ 
+				<?php while(has_sub_field('feature_box')): ?>
+				
+						<div class="medium-6 large-3 columns">
+							<h2><?php the_sub_field('title'); ?></h2>
+							<p class="featimage"><img src="<?php the_sub_field('icon'); ?>"></p>
+							<p class="feat-content"><?php the_sub_field('content'); ?>...</p>
+							<div class="button-small">
+								<a href="<?php the_sub_field('link'); ?>" class="<?php the_sub_field('class'); ?>">Read More</a>
+							</div>
+						</div>
+				
+				<?php endwhile; ?>
+ 
+
+ 
+<?php endif; ?>
+	
+	
 </div>
 
 
@@ -110,7 +133,7 @@ get_header(); ?>
 										enablemarkerclustering="false"
 										addmarkermashup="false"
 										addmarkermashupbubble="false" 
-										addmarkerlist=	"55.8680374,-3.9730085{}mappin.png{}Follanos Garage"
+										addmarkerlist=	"'.$location['lat'].','. $location['lng'] .'{}mappin.png{}Follanos Garage"
 										bubbleautopan=	"true" 
 										distanceunits=	"miles"
 										showbike=		"false"
@@ -127,27 +150,30 @@ get_header(); ?>
 	
 		<div id="testimonials">
 	    <ul class="bjqs">
-	        <li>
+	    
+	    	<?php if(get_field('testimonials','options')): ?>
+ 
+
+ 
+				<?php while(has_sub_field('testimonials','options')): ?>
+				
+						<li>
 		       
-		       <div class="row">
-		       			<div class="small-10 small-centered large-centered large-10 columns">
-		       				<p class="quote">I was driving a death trap for 5 months and i didn't know, Follano's fixed everything and I feel like I'm driving a new car.  I highly recommend these guys</p>
-		       				
-		       				<p class="bywhom">Arlene Fraser</p>
-		       			</div>
-		       </div>
+					       <div class="row">
+					       			<div class="small-10 small-centered large-centered large-10 columns">
+					       				<p class="quote"><?php the_sub_field('quote'); ?></p>
+					       				
+					       				<p class="bywhom"><?php the_sub_field('quote_by'); ?></p>
+					       			</div>
+					       </div>
 		        
-	        </li>
-	        <li>
-		       
-		       <div class="row">
-		       			<div class="small-8 small-centered large-centered large-8 columns">
-		       				Sofia
-		       			</div>
-		       </div>
-		        
-	        </li>
-	       
+			   			</li>
+				
+				<?php endwhile; ?>
+
+ 
+			<?php endif; ?>
+	        
 	        
 	    </ul>
 	</div>
@@ -156,27 +182,6 @@ get_header(); ?>
 
 </div>
 
-<div class="row">
-	<div class="small-12 large-12 columns" role="main">
-	
-	<?php /* Start loop */ ?>
-	<?php while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-			<div class="entry-content">
-				<?php the_content(); ?>
-			</div>
-			<footer>
-				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'FoundationPress'), 'after' => '</p></nav>' )); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php comments_template(); ?>
-		</article>
-	<?php endwhile; // End the loop ?>
 
-	</div>
-</div>
 		
 <?php get_footer(); ?>
