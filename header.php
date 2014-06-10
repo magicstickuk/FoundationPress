@@ -148,7 +148,8 @@
        <div class="row">
        		
        		<div class="medium-3 large-3 columns show-for-large-up">
-       			<p><?php the_field('address', 'options');?></p>
+       			<p><?php the_field('address', 'options');?><br><a href="<?php echo get_permalink('75')?>">MAP</a></p>
+       			
        		</div>
        		
        		<div class="small-12 medium-12 large-6 columns logo">
