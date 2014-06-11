@@ -29,4 +29,6 @@ require_once('library/enqueue-scripts.php');
 // Add theme support
 require_once('library/theme-support.php');
 
+add_filter('show_admin_bar', '__return_false');
+
 ?>

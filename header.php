@@ -156,7 +156,7 @@
        			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png"/></a>
        			
        			<h2><?php the_field('telephone_number', 'options');?> • 07852262729</h2>
-       			<p class="home_email"><a href="<?php the_field('email_address', 'options');?>"><?php the_field('email_address', 'options');?></a></p>
+       			<p class="home_email"><a href="mailto:<?php the_field('email_address', 'options');?>"><?php the_field('email_address', 'options');?></a></p>
        		</div>
        		
        		<div class="medium-3 large-3 columns HeaderRightmj show-for-large-up">
