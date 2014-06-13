@@ -68,6 +68,14 @@ P.home_email A
 	{
 		width: 50%;
 	}
+	.testimonials LI.bjqs-next A IMG
+	{
+		margin-left: 68px !important;
+		width: 20px !important;
+	}
+	#testimonials LI.bjqs-next A
+	{
+	}
 }
 TIME
 {
@@ -168,6 +176,10 @@ H2
 	padding: 10px;
 	background-color: #FFF;
 	border: 1px solid;
+}
+FIGURE
+{
+	text-align: center !important;
 }
 NAV.tab-bar SECTION.tab-bar-section
 {

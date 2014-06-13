@@ -21,7 +21,7 @@ get_header(); ?>
 				
 				<?php if(is_page(75)):?>
 				<p><div class="button-small">
-								<a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>" style="cursor: pointer;" target="_blank">Get Directions</a>
+								<a href="https://www.google.com/maps/dir/Current+Location/<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>" style="cursor: pointer;" target="_blank">Get Directions</a>
 				</div>
 				</p>
 				<?php endif;?>

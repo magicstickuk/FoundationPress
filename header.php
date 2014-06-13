@@ -118,7 +118,7 @@
                     </div>
       		
       		<a href="tel:<?php the_field('telephone_number', 'options');?>">Call Now</a>
-      		<a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>">Get Directions</a>
+      		<a href="https://www.google.com/maps/dir/Current+Location/<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>">Get Directions</a>
       </div>
 
     </section>

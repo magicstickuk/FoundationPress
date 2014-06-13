@@ -94,7 +94,7 @@ get_header(); ?>
 							<p class="featimage"><img src="<?php the_sub_field('icon'); ?>"></p>
 							<p class="feat-content"><?php the_sub_field('content'); ?>...</p>
 							<div class="button-small">
-								<a href="<?php the_sub_field('link'); ?>" class="<?php the_sub_field('class'); ?>">Read More</a>
+								<a href="<?php the_sub_field('link'); ?>">Read More</a>
 							</div>
 						</div>
 				
